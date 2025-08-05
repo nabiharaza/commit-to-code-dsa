@@ -1,0 +1,7 @@
+-- Last updated: 8/5/2025, 2:54:43 PM
+# Write your MySQL query statement below
+SELECT
+    ROUND(100 * AVG(order_date = customer_pref_delivery_date), 2) AS immediate_percentage
+FROM
+    Delivery;
+
