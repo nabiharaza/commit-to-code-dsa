@@ -1,0 +1,15 @@
+// Last updated: 8/5/2025, 2:53:48 PM
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        int left = 0, right = arr.length - 1;
+        while (left <= right){
+            int mid = left + (right-left)/2;
+            if(arr[mid] - mid - 1 < k){
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return k + left;
+    }
+}
